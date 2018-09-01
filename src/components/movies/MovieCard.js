@@ -18,7 +18,10 @@ const MovieCard = ({ movie }) => {
         <div className="director">Directed by {movie.director}</div>
         <div className="rating_bloc">
           <Rating rating={movie.evaluation} />
-          <span>4/5</span>
+          <span>
+            {movie.evaluation}
+            /5
+          </span>
         </div>
         <div className="information">
           <p>{movie.story}</p>
