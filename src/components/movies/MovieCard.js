@@ -4,7 +4,7 @@ import Rating from "../rating/Rating";
 
 const MovieCard = ({ movie }) => {
   return (
-    <div className="card col-md-3 col-sm-3 col-xs-4">
+    <div className="card col-md-3 col-sm-3 col-xs-4 mb-3">
       <div className="poster">
         <img alt="" src={movie.imageAff} />
       </div>
