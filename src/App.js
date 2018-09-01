@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import MovieCard from "./components/movies/MovieCard";
+import MoviesList from "./components/movies/MoviesList";
+import moviesJson from "./MoviesInformation";
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <MovieCard />
+      <div className="container-fluid">
+        <MoviesList movies={moviesJson} />
       </div>
     );
   }
