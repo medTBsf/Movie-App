@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/MovieCard.css";
+import Rating from "../rating/Rating";
 
 const MovieCard = () => {
   return (
@@ -17,13 +18,7 @@ const MovieCard = () => {
 
         <div className="director">Directed by Bill Condon</div>
         <div className="rating_bloc">
-          <div className="rating">
-            <i className="fa fa-star" hidden-area="true" />
-            <i className="fa fa-star" hidden-area="true" />
-            <i className="fa fa-star" hidden-area="true" />
-            <i className="fa fa-star" hidden-area="true" />
-            <i className="fa fa-star-o" hidden-area="true" />
-          </div>
+          <Rating />
           <span>4/5</span>
         </div>
         <div className="information">
