@@ -8,7 +8,8 @@ class App extends Component {
     super();
     this.state = {
       moviesJson: moviesJson,
-      searchByName: ""
+      searchByName: "",
+      minRating: 0
     };
   }
 
@@ -18,14 +19,25 @@ class App extends Component {
     });
   };
 
+  searchByMinRatingFct = updateRating => {
+    this.setState({
+      minRating: updateRating
+    });
+  };
+
   render() {
     return (
       <div className="container-fluid">
-        <Filtrage searchByName={this.searchByNameFct} />
+        <Filtrage
+          searchByName={this.searchByNameFct}
+          minRating={this.state.minRating}
+          searchByRating={update => this.searchByMinRatingFct(update)}
+        />
         <MoviesList
           movies={this.state.moviesJson.filter(elt => {
             return (
-              elt.title.toLowerCase().indexOf(this.state.searchByName) !== -1
+              elt.title.toLowerCase().indexOf(this.state.searchByName) !== -1 &&
+              elt.evaluation >= this.state.minRating
             );
           })}
         />

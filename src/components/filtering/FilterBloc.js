@@ -24,7 +24,10 @@ const FilterBloc = props => {
       <div className="col-md-4">
         <div className="min-rating-filter">
           <span>Minimu Rating :</span>
-          <MinRating />
+          <MinRating
+            rating={props.minRating}
+            searchByRating={update => props.searchByRating(update)}
+          />
         </div>
       </div>
       <div className="col-md-2 button">
