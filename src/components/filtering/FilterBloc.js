@@ -31,7 +31,11 @@ const FilterBloc = props => {
         </div>
       </div>
       <div className="col-md-2 button">
-        <button type="button" className="btn btn-danger">
+        <button
+          type="button"
+          className="btn btn-danger"
+          onClick={newMovie => props.addMovie(newMovie)}
+        >
           Add Movie
         </button>
       </div>
