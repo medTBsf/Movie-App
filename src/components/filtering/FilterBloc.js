@@ -2,19 +2,22 @@ import React from "react";
 import MinRating from "../rating/Rating";
 import "../styles/Filtering.css";
 
-const FilterBloc = () => {
+const FilterBloc = props => {
   return (
     <div className="row mt-3 mb-3 p-3 formulaire">
       <div className="col-md-6">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <div class="input-group-text">&#x1F50D;</div>
+        <div className="input-group">
+          <div className="input-group-prepend">
+            <span className="input-group-text" role="img" aria-label="search">
+              &#x1F50D;
+            </span>
           </div>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="inlineFormInputGroup"
             placeholder="Search a movie"
+            onChange={props.searchByName}
           />
         </div>
       </div>
